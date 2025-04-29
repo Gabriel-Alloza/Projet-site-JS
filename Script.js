@@ -9,16 +9,22 @@ console.log(getData());
 async function displayData(){
     const article = document.querySelector('.container');
 
-    for(i=0; i<= 5; i++){
+    for(i=0; i<= 50; i++){
         const data = await getData();
+
+        const joke = document.createElement('div');
+        joke.classList.add('joke');
+
+
         const setup = document.createElement('p');
         setup.textContent = data.setup;
 
         const delivery = document.createElement('h3');
         delivery.textContent = data.delivery;
 
-        article.appendChild(setup);
-        article.appendChild(delivery);
+        joke.appendChild(setup);
+        joke.appendChild(delivery);
+        article.appendChild(joke);
     }
 }
 
