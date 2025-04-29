@@ -18,3 +18,7 @@
     border-color: #ff6b61;
 }
 
+.intro{
+    display: flex;
+    justify-content: center;
+}
