@@ -49,3 +49,27 @@ window.addEventListener("click", function(e) {
       hideDropdown();
     }
 });
+
+//Formulaire
+function addNewData(){
+    const article = document.querySelector('.container');
+
+    const new_setup = document.forms["Ajout de blagues"]["setup"].value;
+    const new_payoff = document.forms["Ajout de blagues"]["payoff"].value;
+
+    const joke = document.createElement('div');
+    joke.classList.add('joke');
+
+
+    const setup = document.createElement('p');
+    setup.textContent = new_setup
+
+    const delivery = document.createElement('h3');
+    delivery.textContent = new_payoff;
+
+    joke.appendChild(setup);
+    joke.appendChild(delivery);
+    article.appendChild(joke);
+
+
+}
