@@ -22,3 +22,33 @@
     display: flex;
     justify-content: center;
 }
+
+.liste{
+    display: none;
+   
+}
+
+
+.liste.show{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5em;    
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    a:hover {background-color: #ddd;}
+    padding: 16px;
+    font-size: 16px;
+
+}
+
+#menu{
+    background-color: #ff6b61;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
