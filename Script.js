@@ -1,3 +1,5 @@
+
+//Fetchning data:
 async function getData(){
     const rawData = await fetch("https://v2.jokeapi.dev/joke/Any?lang=fr");
     const data = await rawData.json();
@@ -29,3 +31,21 @@ async function displayData(){
 }
 
 displayData();
+
+
+//dropdown
+function showDropdown(){
+    const liste = document.querySelector('.liste');
+    liste.classList.add('show');
+}
+
+function hideDropdown(){
+    const liste = document.querySelector('.liste');
+    liste.classList.remove('show');
+}
+
+window.addEventListener("click", function(e) {
+    if (!e.target.matches("button")) {
+      hideDropdown();
+    }
+});
