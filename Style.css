@@ -41,6 +41,9 @@
     a:hover {background-color: #ddd;}
     padding: 16px;
     font-size: 16px;
+    a:link{color: black;}
+    a:visited{color:red;}
+    a:active{color:#ff6b61;}
 
 }
 
