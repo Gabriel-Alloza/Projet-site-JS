@@ -55,3 +55,10 @@
     border: none;
     cursor: pointer;
 }
+
+.gallerie.col{
+    width: 500px;
+    display:flex;
+    flex-direction:column;
+}
+
