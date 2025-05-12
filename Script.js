@@ -6,7 +6,7 @@ async function getData(){
     return data;
 }
 
-/*console.log(getData());*/
+
 
 async function displayData(){
     const article = document.querySelector('.container');
@@ -77,5 +77,10 @@ function addNewData(){
 //Gallerie
 function galleryCollumn(){
     const gallery = document.querySelector('.gallerie');
-    gallery.classList.add('.colonne')
+    gallery.classList.add('col');
+}
+
+function galleryMosaic(){
+    const gallery = document.querySelector('.gallerie');
+    gallery.classList.remove('col');
 }
