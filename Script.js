@@ -6,7 +6,7 @@ async function getData(){
     return data;
 }
 
-console.log(getData());
+/*console.log(getData());*/
 
 async function displayData(){
     const article = document.querySelector('.container');
@@ -30,7 +30,7 @@ async function displayData(){
     }
 }
 
-displayData();
+
 
 
 //dropdown
@@ -72,4 +72,10 @@ function addNewData(){
     article.appendChild(joke);
 
 
+}
+
+//Gallerie
+function galleryCollumn(){
+    const gallery = document.querySelector('.gallerie');
+    gallery.classList.add('.colonne')
 }
