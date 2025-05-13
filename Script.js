@@ -85,6 +85,7 @@ function galleryMosaic(){
     gallery.classList.remove('col');
 }
 
+//Ajout images
 function addNewImage(){
     const images = document.querySelector('.gallerie');
 
