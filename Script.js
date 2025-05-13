@@ -84,3 +84,18 @@ function galleryMosaic(){
     const gallery = document.querySelector('.gallerie');
     gallery.classList.remove('col');
 }
+
+function addNewImage(){
+    const images = document.querySelector('.gallerie');
+
+    const new_url = document.forms["Ajout_images"]["url"].value;
+    const alt = document.forms["Ajout_images"]["alt"].value;
+
+    const new_image = document.createElement('img');
+
+    new_image.src = new_url;
+    new_image.alt = alt;
+
+    images.appendChild(new_image);
+
+}
