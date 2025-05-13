@@ -59,6 +59,7 @@ function addNewData(){
 
     const joke = document.createElement('div');
     joke.classList.add('joke');
+    joke.classList.add("user_made");
 
 
     const setup = document.createElement('p');
@@ -93,10 +94,18 @@ function addNewImage(){
     const alt = document.forms["Ajout_images"]["alt"].value;
 
     const new_image = document.createElement('img');
+    new_image.classList.add("user_made");
 
     new_image.src = new_url;
     new_image.alt = alt;
 
     images.appendChild(new_image);
 
+}
+
+//suppréssion d'articles ou d'images
+function SupprUserMades(){
+    const user_mades = document.getElementsByClassName("user_made");
+    const to_delete = user_mades[user_mades.length-1];
+    to_delete.remove();
 }
