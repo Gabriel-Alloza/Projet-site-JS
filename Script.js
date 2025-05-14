@@ -109,3 +109,50 @@ function SupprUserMades(){
     const to_delete = user_mades[user_mades.length-1];
     to_delete.remove();
 }
+
+//carousel
+function initiateCarousel(){
+    navigateCarousel(0, 1);
+}
+
+function moveToTheRight(){
+    let carousel = document.getElementsByClassName("slide");
+    let active_slide_num;
+    for(i=0; i<carousel.length; i++){
+        if(carousel[i].classList.contains("show")){
+            active_slide_num = i;
+        }
+    }
+    if(active_slide_num+1>carousel.length-1){
+        navigateCarousel(0, active_slide_num);
+    }
+    else{
+    navigateCarousel(active_slide_num+1, active_slide_num);
+    }
+}
+
+
+function moveToTheLeft(){
+    let carousel = document.getElementsByClassName("slide");
+    let active_slide_num;
+    for(i=0; i<carousel.length; i++){
+        if(carousel[i].classList.contains("show")){
+            active_slide_num = i;
+        }
+    }
+    if(active_slide_num-1 < 0){
+        navigateCarousel(carousel.length-1, active_slide_num);
+    }
+    else{
+    navigateCarousel(active_slide_num-1, active_slide_num);
+    }
+}
+
+function navigateCarousel(n, prev_n){
+    let carousel = document.getElementsByClassName("slide");
+    if(carousel[prev_n].classList.contains("show")){
+        carousel[prev_n].classList.remove("show");
+    }
+    carousel[n].classList.add("show");
+
+}
