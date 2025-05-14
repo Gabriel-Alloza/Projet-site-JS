@@ -62,3 +62,26 @@
     flex-direction:column;
 }
 
+.slide{
+    display: none;
+}
+
+.slide.show{
+    display: flex;
+   
+
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
