@@ -7,7 +7,7 @@
     <link rel = "stylesheet" href = "Style.css">
     <link rel="icon" type="image/x-icon" href= "images/favicon.jpeg">
 </head>
-<body class="l-background">
+<body class="l-background" onload="initiateCarousel()">
 
     <button id="menu" onclick="showDropdown()">Menu</button>
 
@@ -23,6 +23,30 @@
 
     <div class="intro">
         <p>Voici la gallerie, ou vous pourrez retrouver des images.</p>
+    </div>
+
+    <div class="carousel">
+
+        <button onclick="moveToTheLeft()">
+            <img src="images/left.png" style="width: 50px; height: 50px;">
+        </button>
+        <div class="slide">
+            <img src = "images/coca-cola-logo-1.webp"/>
+        </div>
+        
+        <div class="slide">
+            <img src = "images/000178398_91.jpg"/>
+        </div>
+
+        <div class="slide">
+            <img src = "images/publicite.jpg"/>
+        </div>
+
+
+    <button onclick="moveToTheRight()">
+        <img src="images/right.png" style="width: 50px; height: 50px;">
+    </button>
+
     </div>
 
     <button onclick="galleryCollumn()">Colonne</button>
