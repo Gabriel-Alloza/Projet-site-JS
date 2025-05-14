@@ -156,3 +156,72 @@ function navigateCarousel(n, prev_n){
     carousel[n].classList.add("show");
 
 }
+
+
+//Jeux
+function getComputerChoice(){
+    var choice = Math.round(Math.random()*2);
+    if(choice === 0){
+        return "Caillou";
+    }
+    else if(choice === 1){
+        return "Papier";
+    }
+    else{
+        console.log("coucou");
+        return "Ciseaux";
+    }
+}
+
+
+function playGame(){
+
+    const comp_choice = getComputerChoice();
+    const page = document.getElementsByClassName("jeux");
+    rep = document.createElement('p');
+    rep.classList.add("rep")
+    const player = document.forms["jeu"]["joueur"].value;
+    if(player != "Papier" && player != "Caillou" && player != "Ciseaux"){
+        rep.textContent = "Tu l'a mal rentré lol";
+    }
+    else if(player === "Papier"){
+        if(comp_choice === "Caillou"){
+            rep.textContent = "T'as gagné";
+        }
+        else if(comp_choice === "Ciseaux"){
+            rep.textContent = "T'as perdu!";
+        }
+        else{
+            rep.textContent = "Egalité!";
+        }
+    }
+
+        else if(player === "Caillou"){
+        if(comp_choice === "Ciseaux"){
+            rep.textContent = "T'as gagné";
+        }
+        else if(comp_choice === "Papier"){
+            removeEventListener.textContent = "T'as perdu!";
+        }
+        else{
+            rep.textContent = "Egalité!";
+        }
+    }
+
+        else {
+        if(comp_choice === "Ciseaux"){
+            rep.textContent = "T'as gagné";
+        }
+        else if(comp_choice === "Caillou"){
+            removeEventListener.textContent = "T'as perdu!";
+        }
+        else{
+            rep.textContent = "Egalité!";
+        }
+    }
+
+    page[0].appendChild(rep);
+}
+
+
+
